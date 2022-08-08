@@ -57,7 +57,7 @@
  </table>
  
  The Curremcy Converter is a JS Major Project here i used HTML in little amount, CSS for styling and 
- JavaScript to handle the the api and Web Component that allow you to create custom HTML elements , Lifecycle Callbacks connectedCallback to append component data to UI and use Shadow Dom with Custom Elements.
+ JavaScript to handle the the api and render the data to UI and used fetch(),.then and json() to handle the promise. Here is swap button also given which swap the rates of currency which comes from an Api. 
 
 #### Visit Site
 <a href="https://currency-exchange-2022.netlify.app/">view</a>
