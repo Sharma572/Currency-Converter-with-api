@@ -31,7 +31,7 @@ body {
   content: "";
   background: url(./images/word-map.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% 100%;
   opacity: 0.5;
   top: 0;
   left: 0;
@@ -41,7 +41,6 @@ body {
   z-index: -1;
 }
 .container:hover {
-  /* transform: translate(1px); */
   box-shadow: 1px 1px 5px rgba(147, 158, 167, 0.5);
 }
 h1 {
@@ -67,9 +66,9 @@ p {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  border: 1px solid #dedede;
+  border: 1px solid #212121;
   font-size: 16px;
-  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-image: url("./images/download.svg");
   background-position: right 10px top 50%, 0, 0;
   background-size: 12px auto, 100%;
   background-repeat: no-repeat;
@@ -78,10 +77,21 @@ p {
   font-size: 1.4rem;
   text-align: center;
   width: 10rem;
-  background: beige;
-  border: 1px solid black;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid lightslategray;
   padding: 4px;
+  background: #FFE6E6;
 }
+.currency input:hover{
+  opacity: 0.6;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 #swap-btn {
   height: 3rem;
   border-radius: 50%;
@@ -124,6 +134,11 @@ button:focus {
 }
 
 @media (max-width: 430px) {
+  .container::after{
+    /* background: linear-gradient(to bottom, #ffd89b, #19547b); */
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgb(245, 147, 190) 0%, rgba(148,187,233,1) 100%);
+  }
   .currency input {
     width: 9rem;
     font-size: 1.2rem;
